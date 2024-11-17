@@ -1,0 +1,276 @@
+/* ALL PAGE */
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 4128px;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+}
+a:visited, a:link{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Área do Header */
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #242424;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+}
+#menulinks a {
+    margin-left: 20px;
+    margin-right: 20px;
+    display: inline-block;
+    position: relative;
+}
+#menulinks a:hover {
+    zoom: 120%;
+}
+#menulinks a::after {
+    content: '';
+    position: absolute;
+    bottom: -4%;
+    left: 50%;
+    width: 0;
+    height: 4px;
+    border-radius: 100px;
+    background-color: #fffffff5; 
+    transition: width 0.5s ease, left 0.5s ease;
+}
+#menulinks a:hover::after {
+    width: 100%;
+    left: 0
+    
+}
+
+/* Área do Main */
+.container-inicio{
+    width: 100%;
+    height: 1032px;
+    padding: 100px
+}
+/* Section Pagina Inicial */
+#iniciopage h1{
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100px;
+
+    margin-top: 50px;
+    font-size: 2.5em;
+    font-weight: 1000;
+    color: #667EF4;
+}
+#inicio{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#inicio p{
+    font-size: 1.1em;
+    text-align: left;
+    line-height: 1.7;
+    width: 800px;
+}
+#inicio img{
+    width: 600px;
+    height: 600px;
+}
+.p-principal{
+    padding-left: 100px;
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#h2inicio{
+    font-weight: 100px;
+    font-size:2.5em;
+}
+
+/* Section SelectArea */
+#h2page-selection{
+    font-weight: 40px;
+    font-size: 4em;
+    color:white;
+    line-height: 0.8;
+}
+#h2page-selection h2 {
+    height: 350px;
+    width: 75%;
+    
+    display: flex;
+    align-items: end;
+
+    font-size:0.8em;
+    font-weight: 100px;
+}
+#selectarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #242424;
+}
+#selectarea table{
+    margin-top: 70px;
+}
+.tables-index{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 80px;
+    padding-bottom: 80px;
+}
+.tables-index td{
+    height: 350px;
+    width: 280px;
+
+    background-color: grey;
+    box-shadow: 7px 7px 20px #000000;
+    border-radius: 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.tables-index td img{
+    width: 170px;
+    height: 170px;
+} 
+.p-selection{
+    color: white;
+    font-size: 1.5em;
+}
+
+
+/* Área dos contatos recente */
+#contatosrecentes{
+    background-color: aqua;
+}
+
+
+/* Área dos Desenvolvedores */
+#contactdevs{
+    width: 100%;
+    height: 200px;
+    color: #48494B;
+    font-size: 4em;
+    font-weight: 800;
+    text-align: center;
+}
+#perfil-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+}
+.contact-info {
+    flex-direction: column;
+    display: flex;
+    margin: 10px;
+    width: 500px;
+    height: 500px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
+                url(https://cdn.discordapp.com/attachments/1223723013791285350/1307556039343738971/testeeeee.png?ex=673abbf4&is=67396a74&hm=9215500f00e7f84f5bba5cd6a55519d83fd0769c986e05be640b9ca4f2c037af&);
+    background-size: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    animation: natal-luzes 2s infinite;
+}
+.pictureprofile{
+    opacity: 0.5;
+}
+.contact-info:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px 5px rgba(13, 29, 255);
+}
+.contact-info h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+.contact-info h2 {
+    font-size: 1rem;
+    color:#ffffff;
+    margin: 5px 0;
+}
+.perfil-devs {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    object-fit: cover;
+    border: 3px solid #007BFF;
+}
+.chapeu-santa{
+    position: relative;
+    width: 265px;
+    height: 120px;
+    bottom: 90px;
+    right: 168px;
+    transform: scaleX(-1);
+}
+.contact-info a:hover{
+    color: rgb(13, 29, 255);
+    text-decoration-color: aqua;
+}
+.contact-info h2:hover{
+    color: #007BFF;
+    text-decoration-color: aqua;
+    opacity: 0.4;
+}
+@keyframes natal-luzes {
+    0% {
+        box-shadow: 0 0 10px 2px red, 10px 0 10px 2px green, -10px 0 10px 2px blue, 0 -10px 10px 2px yellow;
+    }
+    25% {
+        box-shadow: 0 0 10px 2px green, 10px 0 10px 2px blue, -10px 0 10px 2px yellow, 0 -10px 10px 2px red;
+    }
+    50% {
+        box-shadow: 0 0 10px 2px blue, 10px 0 10px 2px yellow, -10px 0 10px 2px red, 0 -10px 10px 2px green;
+    }
+    75% {
+        box-shadow: 0 0 10px 2px yellow, 10px 0 10px 2px red, -10px 0 10px 2px green, 0 -10px 10px 2px blue;
+    }
+    100% {
+        box-shadow: 0 0 10px 2px red, 10px 0 10px 2px green, -10px 0 10px 2px blue, 0 -10px 10px 2px yellow;
+    }
+}
+
+/* Área do Footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #242424;
+    width: 100%;
+    height: 100px;
+
+    color: #f9f9f9;
+    text-transform: uppercase;
+    line-height: 1.7;
+    font-weight: bold;
+}
+
