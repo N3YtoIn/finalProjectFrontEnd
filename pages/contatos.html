@@ -18,7 +18,7 @@
             <a href="../index.html"><img src="../img/Home.png" alt="Home" title="Inicio"></a>
             <a href=""> <img src="../img/Book.png" title="Contatos" alt="Contatos"></a>
             <a href="./adminmenu.html"> <img src="../img/User plus.png" title="Painel Administrador" alt="Admin Cadastro"></a>
-            <a href="../index.html"><img src="../img/Info.png" alt="Info Creators" title="Informações"></a>
+            <a href="../index.html#desenvolvedores"><img src="../img/Info.png" alt="Info Creators" title="Informações"></a>
         </div>
     </header>
 
@@ -28,30 +28,40 @@
         <section id="filtro">
             <div id="divmycontatos">
                 <h2>Meus Contatos</h2>
-                <p id="sublinhadoh2"></p>
+                <p></p>
             </div>
             <div id="divfiltro">
                 <input type="search" placeholder="Pesquise o Nome do Contato..." id="input-filtro">
-                <h2>Buscar</h2>
-                <h2>Resetar</h2>
+                <h2 id="input-search">Buscar</h2>
+                <h2 id="input-reset">Resetar</h2>
             </div>
         </section>
 
         <!-- Contatos -->
         <section id="contatosrecentes">
             <div class="card-contatosr">
-                <div class="cardformat">
-                    <figure><img src="./img/nathan.PNG" alt="contato.png" id="image-contato"></figure>
-                    <h2 id="name-contato">Nathan Almeida</h2>
-                    <div class="divicons">
-                        <img src="./img/BlackIcons/Mail.png" alt="e-mail.png">
-                        <p id="email-contato">nathanalmeidabrito@gmail.com</p>
-                    </div>
-                    <div class="divicons">
-                        <img src="./img/BlackIcons/Phone.png" alt="telefone.png">
-                        <p id="telefone-contato">(11) 94313-3947</p>
-                    </div>    
-                </div>
+                <!-- <div class="card-contatosr" id="cardContatos">
+                      <div class="cardformat">
+                         <figure><img src="../img/nathan.PNG" alt="contato.png" name="txt_image" id="image-contato"></figure>
+                         <h2 id="name-contato">Nathan Almeida</h2>
+                         <div class="divicons">
+                             <img src="../img/BlackIcons/Mail.png" alt="e-mail.png">
+                             <p id="email-contato" name="txt_email">nathanalmeidabrito@gmail.com</p>
+                         </div>
+                         <div class="divicons">
+                             <img src="../img/BlackIcons/Phone.png" alt="telefone.png">
+                             <p id="telefone-contato" name="txt_telefone" >(11) 94313-3947</p>
+                         </div>    
+                     </div> 
+                </div> -->
+            </div>
+        </section>
+
+        <!-- Pages -->
+        <section id="pages">
+            <div>
+                <h1 id="input-prev"><</h1>
+                <h1 id="input-next">></h1>
             </div>
         </section>
     </main>
