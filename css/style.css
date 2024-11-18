@@ -28,6 +28,7 @@ header{
     align-items: center;
 
     position: fixed;
+    z-index: 1000;
 }
 #menulinks a {
     margin-left: 20px;
@@ -36,7 +37,8 @@ header{
     position: relative;
 }
 #menulinks a:hover {
-    zoom: 120%;
+    transition: 0.6s;
+    transform: scale(120%);
 }
 #menulinks a::after {
     content: '';
@@ -51,16 +53,21 @@ header{
 }
 #menulinks a:hover::after {
     width: 100%;
-    left: 0
-    
+    left: 0  
 }
 
 /* Área do Main */
 .container-inicio{
+    display: flex;
+    align-items: center;
+
     width: 100%;
     height: 1032px;
-    padding: 100px
+
+    padding-left: 100px;
+    padding-right: 100px;
 }
+
 /* Section Pagina Inicial */
 #iniciopage h1{
     display: flex;
@@ -83,10 +90,15 @@ header{
     justify-content: center;
 }
 #inicio p{
-    font-size: 1.1em;
+    width: 750px;
+
+    font-size: 1.2em;
     text-align: left;
-    line-height: 1.7;
-    width: 800px;
+    line-height: 1.6;
+   
+    text-align: justify;
+    font-weight: 500;
+
 }
 #inicio img{
     width: 600px;
@@ -98,15 +110,19 @@ header{
     margin-top: 50px;
 }
 #h2inicio{
-    font-weight: 100px;
+    width: 750px;
+
+    font-weight: 750;
     font-size:2.5em;
+    
+
+    color: #48494B;
 }
 
 /* Section SelectArea */
 #h2page-selection{
-    font-weight: 40px;
     font-size: 4em;
-    color:white;
+    color: white;
     line-height: 0.8;
 }
 #h2page-selection h2 {
@@ -117,7 +133,6 @@ header{
     align-items: end;
 
     font-size:0.8em;
-    font-weight: 100px;
 }
 #selectarea{
     display: flex;
@@ -148,30 +163,128 @@ header{
     align-items: center;
     justify-content: center;
 }
+.tables-index td:hover{
+    cursor: pointer;
+    transition: 0.6s;
+    transform: scale(115%);
+}
 .tables-index td img{
-    width: 170px;
-    height: 170px;
-} 
+    width: 150px;
+    height: 150px;
+
+    margin-top: 50px;
+}
+.tables-index td p{
+    font-weight: 550;
+    font-size: 2.3em;
+    padding-top: 50px;
+}
 .p-selection{
     color: white;
     font-size: 1.5em;
 }
 
-
 /* Área dos contatos recente */
 #contatosrecentes{
-    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9D9D9;
+}
+#contatosrecentes h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: baseline;
+
+    width: 450px;
+    height: 100px;
+    margin-left: -100px;
+    margin-bottom: 200px;
+    background-color: #242424;
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+
+    font-size: 2.6em;
+    color: white;
+}
+.card-contatosr{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 50px;
+}
+.cardformat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: 400px;
+    background-color: #777777;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000;
+}
+.cardformat:hover{
+    transform: scale(115%);
+    transition: 0.6s;
+}
+.cardformat figure img{
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100%;
+    margin-bottom: 40px;
+}
+.cardformat h2{
+    width: 250px;
+    height: auto;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+}
+.cardformat p{
+    width: auto;
+    height: auto;
+
+    font-size: 1.05em;
+    text-align: center;
+    color: #222222;
+    line-height: 25px;
+}
+.cardformat p:hover{
+    transition: 0.6s;
+    color: #e6e6e6;
+}
+.divicons{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.divicons img{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
 }
 
 
 /* Área dos Desenvolvedores */
+#desenvolvedores{
+    display: flex;
+    flex-direction: column;
+}
 #contactdevs{
     width: 100%;
-    height: 200px;
     color: #48494B;
     font-size: 4em;
     font-weight: 800;
     text-align: center;
+    padding-bottom: 100px;
+    padding-top: 100px;
 }
 #perfil-container{
     display: flex;
@@ -180,64 +293,75 @@ header{
     gap: 150px;
 }
 .contact-info {
-    flex-direction: column;
     display: flex;
-    margin: 10px;
+    flex-direction: column;
+
     width: 500px;
     height: 500px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    background-color: #f9f9f9;
+
+    padding: 30px;
+    border-radius: 10px;
+
     text-align: left;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), 
-                url(https://cdn.discordapp.com/attachments/1223723013791285350/1307556039343738971/testeeeee.png?ex=673abbf4&is=67396a74&hm=9215500f00e7f84f5bba5cd6a55519d83fd0769c986e05be640b9ca4f2c037af&);
+                url(../img/hoveruser.png);
     background-size: cover;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     animation: natal-luzes 2s infinite;
 }
-.pictureprofile{
-    opacity: 0.5;
-}
 .contact-info:hover {
-    transform: scale(1.05);
+    transform: scale(110%);
+    transition: 0.7s;
     box-shadow: 0 0 20px 5px rgba(13, 29, 255);
 }
 .contact-info h1 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+    font-size: 1.9em;
+    padding-bottom: 15px;
     color: #007BFF;
 }
-.contact-info h2 {
-    font-size: 1rem;
-    color:#ffffff;
-    margin: 5px 0;
-}
-.perfil-devs {
+.perfil-devs{
     width: 150px;
     height: 150px;
-    border-radius: 50%;
     margin-bottom: 15px;
     object-fit: cover;
-    border: 3px solid #007BFF;
+
+    border-radius: 50%;
+    border: 4px solid #007BFF;
 }
 .chapeu-santa{
     position: relative;
-    width: 265px;
-    height: 120px;
+    width: 250px;
+    height: 115px;
     bottom: 90px;
     right: 168px;
     transform: scaleX(-1);
+    opacity: 85%;
 }
-.contact-info a:hover{
-    color: rgb(13, 29, 255);
-    text-decoration-color: aqua;
+.divicons2{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
 }
-.contact-info h2:hover{
+.divicons2:hover{
+    transition: 0.4s;
+    padding-left: 40px;
+    transform: scale(105%);
+}
+.divicons2 img{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+.divicons2 p{
+    font-size: 1em;
+    color:#ffffff;
+    line-height: 30px;
+}
+.contact-info p:hover{
     color: #007BFF;
-    text-decoration-color: aqua;
-    opacity: 0.4;
+    transition: 0.5s;
 }
 @keyframes natal-luzes {
     0% {
@@ -273,4 +397,3 @@ footer{
     line-height: 1.7;
     font-weight: bold;
 }
-
