@@ -63,8 +63,8 @@ function atualizarPagina() {
     const contatosPagina = contatosOriginais.slice(inicio, fim);
     setCreateCard(contatosPagina);
 
-    document.getElementById('input-prev').style.display = paginaAtual === 1 ? 'none' : 'block';
-    document.getElementById('input-next').style.display =
+    document.getElementById('input-prev').display = paginaAtual === 1 ? 'none' : 'block';
+    document.getElementById('input-next').display =
         fim >= contatosOriginais.length ? 'none' : 'block';
 }
 
