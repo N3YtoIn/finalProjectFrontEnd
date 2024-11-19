@@ -97,26 +97,24 @@ header{
 }
 #divfiltro input{
     width: 400px;
-    height: 30px;
+    height: 30px;   
+    padding-left: 10px;
     border-radius: 20px;
-    border-color: #727272;
+    border-color: #acabab;
     border-width: 2px;
-    border-style: solid;
 
     font-size: 1.1em;
     color: #242424;
-    letter-spacing: 2px;
 }
 #divfiltro input::placeholder{
-    padding-left: 10px;
     color: #919191;
 }
-#divfiltro input:focus{
+#divfiltro input:focus{ 
     transform: scale(105%);
     transition: 0.4s;
 }
 #divfiltro h2{
-    width: 100px;
+    width: 100px;   
     height: 40px;
     border-radius: 20px;
     font-size: 1.3em;
@@ -154,14 +152,13 @@ header{
     width: auto;
     height: auto;
     margin: 30px;
-    float: left;
 }
 .card-contatosr{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    align-content: center;
+    flex-direction: row;
+
     gap: 60px;
 }
 .cardformat{
@@ -262,7 +259,7 @@ header{
     border-color: #667EF4;
     border-style: solid;
     border-width: 2px;
-}
+}   
 
 /* Área do Footer */
 footer{
@@ -273,7 +270,7 @@ footer{
 
     background-color: #242424;
     width: 100%;
-    height: 100px;
+    height: 114px;
 
     color: #f9f9f9;
     text-transform: uppercase;

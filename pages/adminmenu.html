@@ -1,35 +1,73 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
+<!-- Área do Head -->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet"  href="../css/admin.css" type="text/css">
-    <link rel="icon" href="" type="img/png">
-    <title>Document</title>
+    <link rel="icon" href="../img/User plus.png" type="img/png">
+    <title>Cadastro - WHERE IS MY CONTACT</title>
 </head>
-<body>
 
+<!-- Área do Body -->
+<body>
+    <!-- Área do Header -->
     <header>
         <!-- MenuLinks -->
         <div id="menulinks">
-            <a href="../index.html"><img src="./img/Home.png" alt="Home" title="Inicio"></a>
-            <a href="./pages/contatos.html"> <img src="../img/Book.png" title="Contatos" alt="Contatos"></a>
-            <a href="./pages/adminmenu.html"> <img src="./img/User plus.png" title="Painel Administrador" alt="Admin Cadastro"></a>
-            <a href=""><img src="./img/Info.png" alt="Info Creators" title="Informações"></a>
+            <a href="../index.html"><img src="../img/Home.png" alt="Home" title="Inicio"></a>
+            <a href="./contatos.html"> <img src="../img/Book.png" title="Contatos" alt="Contatos"></a>
+            <a href="./adminmenu.html"> <img src="../img/User plus.png" title="Painel Administrador" alt="Admin Cadastro"></a>
+            <a href="../index.html#desenvolvedores"><img src="../img/Info.png" alt="Info Creators" title="Informações"></a>
         </div>
     </header>
 
-    <div id="listLivros">
-            <h1> Gerenciar contatos </h1>
-        <div class="linha">
-                <div class="titulo">Nome</div>
-                <div class="titulo">Telefone</div>
-                <div class="titulo">Image</div>
-                <div class="titulo">Email</div>
+    <!-- Área do Main -->
+    <main>
+        <!-- Área de Cadastro -->
+        <section id="areaCadastro">
+            <div id="cadastro">
+                <h1>Cadastro de Contatos</h1>
+                <form id="formulario">
+                    <label>Nome</label> 
+                    <input type="text" name="txt_nome" id="nome" placeholder="Matuê"><br>
+
+                    <label>Email</label> 
+                    <input type="email" name="txt_email" id="email" placeholder="matuecomercial@30praum.com.br"><br>
+
+                    <label>Telefone</label> 
+                    <input type="tel" name="txt_telefone" id="telefone" placeholder="(85) 33333-3333"><br>
+
+                    <label>Imagem</label> 
+                    <input type="file" name="txt_image" id="image"><br>
+
+                    <div id="salvar">Salvar</div>
+                </form>
             </div>
-            <div id="listDados">
-         </div>
-       
-    </div>
+
+            <div id="preview">
+                <div class="card-preview" id="cardContatos">
+                    <h1>Preview</h1>
+                    <div class="cardformat">
+                        <figure><img src="../img/nathan.PNG" alt="contato.png" name="txt_image" id="image-preview"></figure>
+                        <h2 id="name-preview">Nathan Almeida</h2>
+                        <div class="divicons">
+                            <img src="../img/BlackIcons/Mail.png" alt="e-mail.png">
+                            <p id="email-preview" name="txt_email">nathanalmeidabrito@gmail.com</p>
+                        </div>
+                        <div class="divicons">
+                            <img src="../img/BlackIcons/Phone.png" alt="telefone.png">
+                            <p id="telefone-preview" name="txt_telefone" >(11) 94313-3947</p>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </section>
+    <!-- Área do Footer -->
+    <footer>
+        <p>© 2024 - Nathan & Gabriel - UNIFECAF</p>
+        <p>WHERE IS MY CONTACT LTDA</p>
+    </footer>
 </body>
 </html>
