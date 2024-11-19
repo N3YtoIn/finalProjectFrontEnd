@@ -159,7 +159,7 @@ header{
     align-content: center;
     flex-direction: row;
 
-    gap: 60px;
+    gap: 60px 60px;
 }
 .cardformat{
     display: flex;

@@ -168,7 +168,7 @@ header{
     padding-bottom: 35px;
     font-size: 1.7em;
 }
-.cardformat{
+.cardformatp{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -181,6 +181,158 @@ header{
     border-radius: 20px;
     box-shadow: 5px 5px 20px #000000;
 }
+.cardformatp:hover{
+    transform: scale(115%);
+    transition: 0.6s;
+}
+.cardformatp figure img{
+    width: 200px;
+    height: 200px;
+
+    border-radius: 100%;
+    margin-bottom: 40px;
+}
+.cardformatp h2{
+    width: 250px;
+    height: auto;
+    padding-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    color: black;
+}
+.cardformatp p{
+    width: auto;
+    height: auto;
+
+    font-size: 1.05em;
+    text-align: center;
+    color: #222222;
+    line-height: 25px;
+}
+.cardformatp p:hover{
+    transition: 0.6s;
+    color: #e6e6e6;
+}
+.diviconsp{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+.diviconsp img{
+    width: 20px;
+    height: 20px;
+    margin-right: 7px;
+}
+/* Contatos Cadastrados */
+#areaContatos{
+    width: 100%;
+}
+#divTitle{
+    width: auto;
+    height: 150px;
+    align-items: center;
+}
+#divTitle h2{
+    font-size: 1.5em;
+}
+#divTitle div{
+    height: 20px;
+    width: 350px;
+    background-color: #242424;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px; 
+    margin-top: 10px;
+}
+#divfiltro{
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 350px;
+}
+#divfiltro input{
+    width: 400px;
+    height: 30px;   
+    padding-left: 10px;
+    border-radius: 20px;
+    border-color: #acabab;
+    border-width: 2px;
+
+    font-size: 1.1em;
+    color: #242424;
+}
+#divfiltro input::placeholder{
+    color: #919191;
+}
+#divfiltro input:focus{ 
+    transform: scale(105%);
+    transition: 0.4s;
+}
+#divfiltro h2{
+    width: 100px;   
+    height: 40px;
+    border-radius: 20px;
+    font-size: 1.3em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+#input-search{
+    color: #ffffff;
+    background-color: #667EF4;
+    border-width: 2px;
+}
+#input-search:hover{
+    cursor: pointer;
+    transform: scale(110%);
+    transition: 0.6s;
+}
+#input-reset{
+    color: #242424;
+    border-color: #667EF4;
+    border-style: solid;
+    border-width: 2px;
+}
+#input-reset:hover{
+    cursor: pointer;
+    transform: scale(110%);
+    transition: 0.6s;
+}
+
+/* Cards */
+#areaCadastros{ 
+    height: auto;
+    width: auto;
+    margin: 60px;
+}
+.card-contatosr{ 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 60px 60px;
+}
+.cardformat{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 300px;
+    height: auto;
+    background-color: #777777;
+
+    border-radius: 20px;
+    box-shadow: 5px 5px 20px #000000;
+    margin-bottom: 60px;
+}
 .cardformat:hover{
     transform: scale(115%);
     transition: 0.6s;
@@ -191,6 +343,8 @@ header{
 
     border-radius: 100%;
     margin-bottom: 40px;
+    margin-top: 30px;
+    
 }
 .cardformat h2{
     width: 250px;
@@ -225,6 +379,100 @@ header{
     height: 20px;
     margin-right: 7px;
 }
+.divbuttonedit{
+    width: 90%;
+    height: 90px;
+    gap: 10px 10px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.divbuttonedit h2{
+    height: 40px;
+    flex: 1;
+    padding-top: 5px;
+
+    border-radius: 20px;
+    border-color: #667EF4;
+    border-style: solid;
+
+    font-size: 1.3em;
+    font-weight: bold;
+    color: #ffffff;
+}
+.divbuttonedit h2:hover{
+    cursor: pointer;
+    background-color: #667EF4;
+    transition: 0.5s;
+    transform: scale(105%);
+    
+}
+#input-excluir{
+    height: 0px;
+    margin-left: 250px;
+    margin-top: 15px;
+
+    display: flex;
+    justify-content: center;
+
+    color: #e22d2d;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+#input-excluir:hover{
+    cursor: pointer;
+    height: 25px;
+    width: 25px;
+    color: #ffffff;
+    background-color: #e22d2d;
+    transform: scale(150%);
+    transition: 0.5s;
+    border-radius: 100%;
+
+}
+/* Section Pages */
+#pages{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#pages div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+#pages div h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 50px;
+    width: 50px;
+
+    background-color: #667EF4;
+    border-radius: 100%;
+    border-color: #667EF4;
+    border-style: solid;
+    border-width: 2px;
+
+    color: #ffffff;
+    font-size: 1.4em;
+}
+#pages div h1:hover{
+    cursor: pointer;
+    transform: scale(115%);
+    transition: 0.6s;
+    background-color: #ffffff;
+    color: #667EF4;
+    border-color: #667EF4;
+    border-style: solid;
+    border-width: 2px;
+}   
 
 /* Área do Footer */
 footer{
