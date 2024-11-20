@@ -149,16 +149,16 @@ header{
 
 /* Section Contatos */
 #contatosrecentes{
-    width: auto;
     height: auto;
-    margin: 30px;
+    width: auto;
+    margin: 60px;
 }
 .card-contatosr{
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-content: center;
     flex-direction: row;
-
+    flex-wrap: wrap;
     gap: 60px 60px;
 }
 .cardformat{

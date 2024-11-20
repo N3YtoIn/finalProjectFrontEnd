@@ -53,7 +53,7 @@ const setCreateCard = function (contatos) {
         pTelefone.appendChild(textoTelefone);
     });
 };
-const contatosPorPagina = 5;
+const contatosPorPagina = 20;
 let paginaAtual = 1;
 let contatosOriginais = [];
 

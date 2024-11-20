@@ -124,15 +124,17 @@ const setCardItens = function(dadosContatos){
         divTelefone.innerHTML = `<img src="../img/BlackIcons/Phone.png" alt="telefone.png"><p>${contato.telefone}</p>`; 
         
 
-        divEditar.innerHTML   = '<h2>Editar</h2>';
-        divExcluir.innerHTML  = '<h2>Excluir</h2>';
+        divEditar.innerHTML   = '<h2 id="input-editar">Editar</h2>';
+        divExcluir.innerHTML  = '<h2 id="input-excluir">Excluir</h2>';
         
 
         divEditar.setAttribute('class', 'divbuttonedit');
         divExcluir.setAttribute('class', 'divbuttonedit');
         divEditar.setAttribute('idContato', contato.id);
         divExcluir.setAttribute('idContato', contato.id);
-        
+        divFormat.setAttribute('class','cardformat');
+        divEmail.setAttribute('class','divicons');
+        divTelefone.setAttribute('class','divicons');
 
         divListDados.appendChild(divDados);
         divDados.appendChild(divFormat);
