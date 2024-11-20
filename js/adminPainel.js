@@ -201,6 +201,40 @@ document.getElementById('salvar').addEventListener('click', function(){
     }
 });
 
+// Função para filtrar contatos por nome
+const filtrarContatos = function(nomeFiltro) {
+    let url = 'https://app-avaliacao-brh0avd2ahegehac.brazilsouth-01.azurewebsites.net/projeto2/fecaf/listar/contatos'; 
+
+    fetch(url)
+        .then(response => response.json())
+        .then(dados => {
+            let contatosFiltrados = dados.contatos.filter(contato => 
+                contato.nome.toLowerCase().includes(nomeFiltro.toLowerCase())
+            );
+            setCardItens(contatosFiltrados);
+        })
+        .catch(error => console.error('Erro ao buscar contatos:', error));
+}
+
+
+const resetarContatos = function() {
+    document.getElementById('input-filtro').value = '';  
+    getContatos();  
+}
+
+// Evento de clique no botão "Buscar"
+document.getElementById('input-search').addEventListener('click', function() {
+    let nomeFiltro = document.getElementById('input-filtro').value;
+    filtrarContatos(nomeFiltro);
+});
+
+// Evento de clique no botão "Resetar"
+document.getElementById('input-reset').addEventListener('click', function() {
+    resetarContatos();
+});
+
+
+
 // Ao carregar a página, lista os contatos cadastrados
 window.addEventListener('load', function(){
     getContatos();
