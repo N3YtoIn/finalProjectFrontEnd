@@ -1,4 +1,4 @@
-// Função para pegar os dados do formulário e prepará-los para envio
+// Função para pegar os dados do formulário
 const getDadosForm = function(){
     let contatoJSON = {};
     let status = true;
@@ -31,7 +31,6 @@ const getDadosForm = function(){
 // Função para salvar um novo contato
 const postContato = async function(dadosContato){
     let url = 'https://app-avaliacao-brh0avd2ahegehac.brazilsouth-01.azurewebsites.net/projeto2/fecaf/novo/contato'
-
     let response = await fetch(url, {
         method: 'POST',
         mode: 'cors',
@@ -52,7 +51,7 @@ const putContato = async function(dadosContato){
 
     let id = sessionStorage.getItem('idContato')
 
-    let url = 'https://app-avaliacao-brh0avd2ahegehac.brazilsouth-01.azurewebsites.net/projeto2/fecaf/atualizar/contato/'+id
+    let url = `https://app-avaliacao-brh0avd2ahegehac.brazilsouth-01.azurewebsites.net/projeto2/fecaf/atualizar/contato/${id}`
 
     let response = await fetch(url, {
         method: 'PUT',
@@ -62,7 +61,7 @@ const putContato = async function(dadosContato){
     })
 
     if(response.status == 200){
-        alert('Registro atualizado com sucesso.')
+        alert('Registro atualizado com sucesso.')     
         getContatos()
     }else{
         alert('Não foi possível atualizar o Contato, verifique os dados encaminhados.')
@@ -101,6 +100,7 @@ const getContatos = async function(){
 // Função para criar a lista de contatos no HTML
 const setCardItens = function(dadosContatos){
     let divListDados = document.getElementById('cardContatos');
+    
     divListDados.innerHTML = ''; 
 
     dadosContatos.forEach(function(contato){
@@ -173,10 +173,10 @@ const getBuscarContato = async function(id) {
     console.log('Dados retornados do servidor:', dados); 
 
     if (response.status == 200 && dados.contato) {
-        document.getElementById('nome').value = dados.contato.nome;
-        document.getElementById('email').value = dados.contato.email;
-        document.getElementById('telefone').value = dados.contato.telefone;
-        document.getElementById('image').value = dados.contato.imagem;
+        document.getElementById('nome').value       = dados.contato[0].nome;
+        document.getElementById('email').value      = dados.contato[0].email;
+        document.getElementById('telefone').value   = dados.contato[0].telefone;
+        document.getElementById('image').value      = dados.contato[0].image;
 
         document.getElementById('salvar').innerText = 'Atualizar';
 
