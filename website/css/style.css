@@ -61,7 +61,15 @@ header{
     width: 100%;
     left: 0  
 }
-
+#admin{
+    font-size: 0.9em;
+    color: #ffffff;
+}
+#admin:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(110%);
+}
 /* Área do Main */
 .container-inicio{
     display: flex;

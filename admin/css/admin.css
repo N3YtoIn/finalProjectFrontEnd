@@ -33,32 +33,24 @@ header{
     position: fixed;
     z-index: 1000;
 }
-#menulinks a {
-    margin-left: 20px;
-    margin-right: 20px;
-    display: inline-block;
-    position: relative;
+#menulinks{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-#menulinks a:hover {
-    transition: 0.6s;
-    transform: scale(120%);
+#menulinks h1{
+    color: #667EF4;
 }
-#menulinks a::after {
-    content: '';
-    position: absolute;
-    bottom: -4%;
-    left: 50%;
-    width: 0;
-    height: 4px;
-    border-radius: 100px;
-    background-color: #fffffff5; 
-    transition: width 0.5s ease, left 0.5s ease;
+#menulinks h1:hover{
+    cursor: pointer;
+    transition: 0.5s;
+    transform: scale(110%);
+} 
+#menulinks h2{
+    color: #ffffff;
+    font-weight: 100;
 }
-#menulinks a:hover::after {
-    width: 100%;
-    left: 0  
-}
-
 /* Área do Main */
 
 /* Área de Cadastro */

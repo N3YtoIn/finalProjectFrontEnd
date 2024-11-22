@@ -52,7 +52,6 @@ const putContato = async function(dadosContato){
 
     let id = sessionStorage.getItem('idContato')
 
-    alert(id)
     let url = 'https://app-avaliacao-brh0avd2ahegehac.brazilsouth-01.azurewebsites.net/projeto2/fecaf/atualizar/contato/'+id
 
     let response = await fetch(url, {
@@ -120,8 +119,8 @@ const setCardItens = function(dadosContatos){
         imgContato.setAttribute('src', contato.image);  
         imgContato.setAttribute('alt', 'contato.png');  
         divNome.innerText     = contato.nome;           
-        divEmail.innerHTML    = `<img src="../img/BlackIcons/Mail.png" alt="e-mail.png"><p>${contato.email}</p>`;  
-        divTelefone.innerHTML = `<img src="../img/BlackIcons/Phone.png" alt="telefone.png"><p>${contato.telefone}</p>`; 
+        divEmail.innerHTML    = `<img src="./img/BlackIcons/Mail.png" alt="e-mail.png"><p>${contato.email}</p>`;  
+        divTelefone.innerHTML = `<img src="./img/BlackIcons/Phone.png" alt="telefone.png"><p>${contato.telefone}</p>`; 
         
 
         divEditar.innerHTML   = '<h2 id="input-editar">Editar</h2>';
